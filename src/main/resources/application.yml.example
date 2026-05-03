@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//YOUR_HOST:1521/YOUR_SERVICE
+    username: REPLACE_ME
+    password: REPLACE_ME
+    driver-class-name: oracle.jdbc.OracleDriver
+
+sentinel:
+  polling-interval-seconds: 30
+  rules:
+    slow-query-threshold-ms: 2000
+    full-scan-min-rows: 10000
+    lock-wait-threshold-seconds: 5
+    n-plus-one-window-seconds: 10
+    n-plus-one-min-occurrences: 5
+  schemas:
+    - YOUR_SCHEMA

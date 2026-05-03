@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:sentinel;DB_CLOSE_DELAY=-1;MODE=Oracle
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+
+sentinel:
+  polling-interval-seconds: 3600
+  oracle-views-enabled: false
+  awr-enabled: false
+  rules:
+    slow-query-threshold-ms: 2000
+    full-scan-min-rows: 10000
+    lock-wait-threshold-seconds: 5
+    n-plus-one-window-seconds: 10
+    n-plus-one-min-occurrences: 5
+  schemas:
+    - HR
+  store:
+    max-anomalies: 1000

@@ -1,0 +1,99 @@
+# --- Build output ---
+target/
+build/
+out/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# --- Maven ---
+.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# --- Gradle (just in case) ---
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# --- Spring Boot ---
+*.original
+spring-shell.log
+
+# --- IDE: IntelliJ ---
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.shelf/
+
+# --- IDE: Eclipse / STS ---
+.project
+.classpath
+.settings/
+.springBeans
+.factorypath
+.apt_generated/
+.apt_generated_test/
+.sts4-cache/
+
+# --- IDE: VS Code ---
+.vscode/
+
+# --- IDE: NetBeans ---
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# --- Logs ---
+logs/
+*.log
+*.log.*
+
+# --- Tests / coverage ---
+.surefire-*
+*.log.lck
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+ehthumbs_vista.db
+
+# --- Secrets / local config ---
+src/main/resources/application.yml.local
+src/main/resources/application-local.yml
+src/main/resources/application-secrets.yml
+*.pem
+*.p12
+*.jks
+*.keystore
+.env
+.env.local
+.env.*.local
+
+# --- Docker / Testcontainers ---
+.testcontainers.properties.local
+
+# --- Tooling ---
+.claude/
